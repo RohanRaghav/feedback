@@ -278,6 +278,9 @@
     padding: 8px 15px;
     font-size: 0.9rem;
     border: 2px solid #495E57;
+  }
+
+  .next, .pre{
     border-radius: 70%;
   }
   .navigation-buttons {
