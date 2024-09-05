@@ -4,7 +4,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <nav className="navbar">
         <div className="navbar-content">
-          <img src="logo1.jpg" alt="Logo" className="navbar-logo" />
+          <img src="Cac_logo.png" alt="Logo" className="navbar-logo" />
         </div>
         <div className="navbar-links">
           <a href="#member" className="nav-link">Guidlines</a>
