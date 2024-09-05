@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+  overflow-x: hidden;
 }
 
 .hero-section {
@@ -37,10 +39,11 @@
 
 .content-container {
   padding: 30px;
+  padding-left: 200px;
 }
 
 .question-container {
-  background:  url(/public/img.png);
+  background:  url(/public/img1.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -68,6 +71,7 @@
   display: inline-block;
   padding-right: 0px;
   padding-top: 25px;
+  flex-direction: row-reverse;
 }
 
 .rating input {
@@ -162,6 +166,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  padding-top: 30px;
+  left: -60px;
 }
 
 .next{
@@ -169,6 +176,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  padding-top: 34px;
+  left: 40px;
+  position: relative;
 }
 
 .image{
@@ -178,4 +188,153 @@
 
 .login-container{
   padding-top: 100px;
+  background: #ADBFB4;
+  height: 250px;
+}
+
+.feedback-section{
+  position: relative;
+  top: -35px;
+}
+
+.submit{
+  border: unset;
+  border-radius: 15px;
+  color: #223931;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #223931;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+}
+
+.submit:hover {
+  color: #e8e8e8;
+}
+
+.submit:hover::before {
+  width: 100%;
+}
+.abc{
+    border: 3px solid #223931; /* Adjust border thickness and color */
+    border-radius: 20px 0 0 20px; /* Top-left and bottom-left corners are rounded, right corners are square */
+    padding: 10px; /* Adjust padding as needed */
+    display: inline-block; /* Optional: ensures that label wraps around content */
+    width: 100px;
+    background-color: #fff2bf;
+}
+
+.def{
+  border: 3px solid #223931; /* Adjust border thickness and color */
+    border-radius: 0 20px 20px 0; /* Top-left and bottom-left corners are rounded, right corners are square */
+    padding: 10px; /* Adjust padding as needed */
+    display: inline-block; /* Optional: ensures that label wraps around content */ 
+    height: 20px;
+    margin-left: 10px;
+    background-color: #fff2bf;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  .next, .pre, .submit {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border: 2px solid #495E57;
+    border-radius: 70%;
+  }
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  .navigation-buttons button {
+    margin-bottom: 10px;
+  }
+
+  .emogicontainer {
+    position: relative;
+    top: -30px;
+    font-size: 5rem;
+  }
+
+  /* Adjust input field for the coordinator's name */
+  input#coordinatorName {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .question-container {
+    background-image: url(/public/img3.png);
+    background-size: contain; /* Ensures the image covers the entire container */
+    background-position: center top; /* Align the image towards the top */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 200px; /* Adjust the height for mobile */
+  }
+  
+  .feedback-section h2{
+    font-size: 1.6rem;
+  }
+  .feed{
+    font-size: 1rem;
+  }
+  .image{
+    height: 20px;
+    width: 20px;
+  }
+  .rating label {
+    float: none; /* Remove float for mobile for better alignment */
+    display: inline-block; /* Inline-block to align stars naturally left to right */
+  }
+
+  .rating {
+    text-align: center; /* Optionally center the stars */
+    flex-direction: row;
+  }
+  .feedback-section{
+    position: relative;
+    left: 40px;
+  }
+}
+
+input{
+  border-radius: 20px;
 }
