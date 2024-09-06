@@ -26,7 +26,6 @@ const Feedback = () => {
   const [coordinatorName, setCoordinatorName] = useState('');
   const [coordinatorRating, setCoordinatorRating] = useState(null);
   const [loading, setLoading] = useState(false); // New loading state
-  const [isMobile, setIsMobile] = useState(false);
 
   // Handles rating change for each question
   const handleRatingChange = (questionIndex, ratingValue) => {
@@ -129,7 +128,7 @@ const Feedback = () => {
                       <>
                         <div>
                             <div>
-                          <label htmlFor="coordinatorName">Who is your favorite coordinator?</label></div>
+                          <label htmlFor="coordinatorName">Who is your venue coordinator and Rate him?</label></div>
                           <div>
                           <input
                             type="text"
